@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+    <!--<ul th:each="retailer : ${retailerList}">
+        <li class="align-middle" th:text="${retailer.RetailerName}"></li>
+    </ul>
+    -->
+    
+    list of Fruit:
+<table border=1>
+        <tr>            
+            <th> FruitName</th>
+            <th> FruitPrice</th>
+            <th> FruitType</th>
+        </tr>
+        <tr th:each="fruit : ${fruitList}">
+            <td class="align-middle" th:text="${fruit.FruitName}"></td>
+            <td class="align-middle" th:text="${fruit.FruitPrice}"></td>
+            <td class="align-middle" th:text="${fruit.FruitType}"></td>
+        </tr>
+    </table>
+
+</html>
