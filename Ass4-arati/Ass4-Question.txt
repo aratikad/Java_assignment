@@ -1,0 +1,28 @@
+Java Regex is not used to find patterns in text, it can also be used to do find and replace.
+
+Refer Javadoc or research any other place on the internet to accomplish the following.
+
+
+
+1. Create a new Eclipse Java project.
+
+
+
+2. Given a file farmers.txt (you need to create this file in your project) with the following contents of ten farmers.
+
+sameer, 25, AP, 987654321
+
+ruby, 31,MP, 8526656675
+
+
+Add other 8 farmers details in the above comma separated format(name,age,region,phone). 
+
+
+
+3. Read the above file in your java project (using File IO classes).
+
+Use regex to find and print if each of the farmer has a valid phone number. A phone number is valid if it is a 10 digit number.
+
+
+
+Demo the above requirement in a main class.
