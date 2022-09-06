@@ -1,0 +1,5 @@
+1. Create a new Eclipse Dynamic Web project.
+
+2.  Implement the following requirement from BestFarms company. 
+
+BestFarms has a domain(Model) class WholeSaler with properties name, age, annualIncome. An Table WHOLESALER is associated with it. Use spring-jdbc to implement saving WholeSaler objects to the database. 
