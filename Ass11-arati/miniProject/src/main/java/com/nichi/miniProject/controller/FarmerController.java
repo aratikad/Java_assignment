@@ -1,9 +1,6 @@
 package com.nichi.miniProject.controller;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
@@ -29,8 +26,6 @@ public class FarmerController
 
         @Autowired
         FarmerService_V2 farmerService;
-
-
 
 
         @GetMapping("/farmers/list")
@@ -73,13 +68,9 @@ public class FarmerController
                 model.addAttribute("farmerList",ListOfFarmers);
                 model.addAttribute("farmer_name",fname);
 
-                
                 System.out.println("size of list ="+ListOfFarmers.size());
-
-
               }
-
-             // RedirectView redirectView = new RedirectView("/");
+              
               return "resultSearchFarmerDetails.html";
     }
 

@@ -18,6 +18,7 @@ public class FarmerService_V2 {
     @Autowired
     FarmerRepositry_V2 farmerRepositry;
 
+
     public List<Farmer> getAllFarmers() 
     {
         List<Farmer> farmersList = new ArrayList<Farmer>();
@@ -58,69 +59,6 @@ public class FarmerService_V2 {
         {
             farmerRepositry.deleteById(fId);
         }
-
-    
-
-
-/*new
-@Transactional
-        public List<Farmer> findAllFarmers(String keyword)
-        {
-
-                if(keyword!=null)
-                  {  return farmerRepositry.search(keyword);
-                  }
-
-
-                  return (List<Farmer>) farmerRepositry.findAll();
-
-
-        }
-
-        */
-
-/*
-        List<Farmer> farmerList=FarmerList
-        .stream()
-        .filter(fty -> (fty.getFname().equals(fname)))
-        .collect(Collectors.toList());
-
-
-      // return  farmerRepositry.searchByfname(fname);
-    }*/
-
-
-
-    
-
-
- //   public Farmer findByName(String name);
-
-   
-/*   searchByfname@Transactional
-   public void deletefarmerById(int farmerId) {
-           // farmerRepositry.deleteById(farmerId);
-                   // deleteById throws Exception when farmer with that id does not exist,
-                   // Therefore we are trying alternative below
-   
-           List<Farmer> farmerList = getAllFarmers();
-   
-           for (Farmer farmer : farmerList) {
-               if (farmer.getFarmerId() == farmerId)
-                   farmerRepositry.deleteById(farmerId);
-           }
-   
-       }*/
-
-
-/* 
-@Transactional
-    public void deleteFarmerByAge(int age) {
-        farmerRepositry.deleteByAge(age);
-    }
-
-
- */
 
     
 

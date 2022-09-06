@@ -12,22 +12,15 @@ public class ProjectSecurityConfig extends WebSecurityConfigurerAdapter {
 
 
     @Override
-    protected void configure(HttpSecurity http) throws Exception {
-	
-//for testing 
+    protected void configure(HttpSecurity http) throws Exception 
+	{
 
-	
-http.authorizeRequests().antMatchers("/").authenticated()
+       http.authorizeRequests().antMatchers("/").authenticated()
 		.and()
 		.authorizeRequests().antMatchers("/console/**").permitAll();
 		http.csrf().disable(); // POST not working fix
 		http.headers().frameOptions().disable(); // H2 console fix
 	
-		//.mvcMatchers("/**").permitAll()
-
-
-		//production time
-
 		http.authorizeRequests()
 		.and()
 		.formLogin().loginPage("/login").permitAll()
