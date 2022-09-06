@@ -1,0 +1,13 @@
+Create a new Java Project.  Use the Basket, UrbanFarmer and Retailer classes and modify them to suit the follwing use case.
+
+Use case:
+
+Basket stores a list of Fruits(either a Mango or Apple).  You need to add the Fruit interface and the Mango and Apple classes to the project.
+
+UrbanFarmer's task is to infinitely write a Fruit(either a Mango or Apple) to the Basket. He/She will put the Fruit in the Basket only if the Basket has less than 5 Fruits.
+
+Retailer's task is to Consume a Fruit from the same Basket. Whenever, he consumes one Fruit, he records it in a File "fruits-bought.txt".
+
+
+
+Demo the above requirement in a main class.Attach the screenshots.
