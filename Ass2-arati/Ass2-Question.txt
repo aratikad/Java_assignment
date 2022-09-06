@@ -1,0 +1,19 @@
+Create a new Java Project with just Farmer and WholeSaler class. 
+
+Make both inherit from an interface Person.
+
+
+
+Enhance WholeSaler class such that all it can only have a list of maximum 5 farmers.
+
+If more than 5 farmers are added (that is when 6th farmer is added) it should throw a user defined exception 'FarmerListLimitExceededException' 
+
+
+
+Hint: See in which method you are adding. addFarmer(Farmer f); You should throw the exception here.
+
+
+
+Demo the above requirement in a main class.
+
+Attach the screenshots.
