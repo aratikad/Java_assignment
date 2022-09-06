@@ -1,0 +1,17 @@
+1. Create a new maven project downloaded from the spring initializer website with web,thymeleaf, jpa, h2, devtools, validation dependencies.
+
+
+
+2.  Implement the following requirement from BestFarms company.
+
+A Retailer domain class, associated RetailerRepositry, RetailerService and associated RetailerController classes.
+
+
+
+Implement a request mapping /retailers/list to show list of all retailers.
+
+
+
+Example URLs to test
+
+http://localhost:8080/retailers/list should show Json array of all sample retailers from the H2 DB.
