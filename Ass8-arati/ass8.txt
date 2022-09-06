@@ -1,0 +1,16 @@
+
+
+<html>
+
+<script>
+
+fetch(" https://jsonplaceholder.typicode.com/users")
+.then(response=>response.json())
+.then(
+    response.map(farmer=><li></li>)
+)
+
+
+</script>
+
+</html>

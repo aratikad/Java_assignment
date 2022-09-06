@@ -1,0 +1,7 @@
+Create required html and/or JS files to get data from https://jsonplaceholder.typicode.com/users and display users in a html table with only the following columns:
+
+Name Email Phone.
+
+
+
+Use XHR or Fetch.
