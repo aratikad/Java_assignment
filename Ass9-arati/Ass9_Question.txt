@@ -1,0 +1,19 @@
+1. Create a new maven project downloaded from the spring initializer website with web,thymeleaf, devtools, validation dependencies.
+
+
+
+2.  Implement the following requirement from BestFarms company.
+
+A Fruit domain class, associated FruitRepositry, associated FruitController classes.
+
+
+
+Implement a request mapping /fruits/list/{type} to show fruit list of a particular type.
+
+
+
+Example URLs to test
+
+http://localhost:8080/fruits/list/sweet
+
+http://localhost:8080/fruits/list/tangy 
