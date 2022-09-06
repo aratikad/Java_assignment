@@ -1,0 +1,29 @@
+ASSIGNMENT(File2DB utility)
+
+1. Create a new Eclipse Java project.
+
+
+
+2. Given a file retailers.txt (you need to create this file in your project) with the following contents of ten farmers.
+
+sameer, 25, AP, 987654321
+
+ruby, 31,MP, 8526656675
+
+
+
+Add other 8 farmers details in the above comma separated format(name,age,region,phone). 
+
+
+
+3. Create a database AMZN. Create a Table called RETAILER with approriate columns and column types and constraints if any for storing the above data.
+
+
+
+3. Read the above retailers.txt  file in your java project (using File IO classes) and each line as a row in the RETAILER table.
+
+
+
+
+
+Demo the above requirement in a main class. Attach the screenshots.
