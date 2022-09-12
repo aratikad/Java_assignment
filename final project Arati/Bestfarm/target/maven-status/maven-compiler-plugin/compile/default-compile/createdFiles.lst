@@ -1,0 +1,9 @@
+com\miniProject2\Bestfarm\services\FarmerService_V2.class
+com\miniProject2\Bestfarm\repositries\FarmerRepositry_V2.class
+com\miniProject2\Bestfarm\BestfarmApplication.class
+com\miniProject2\Bestfarm\model\User.class
+com\miniProject2\Bestfarm\model\Farmer.class
+com\miniProject2\Bestfarm\controller\LoginController.class
+com\miniProject2\Bestfarm\controller\FarmerRestController.class
+com\miniProject2\Bestfarm\controller\HomeController.class
+com\miniProject2\Bestfarm\config\ProjectSecurityConfig.class

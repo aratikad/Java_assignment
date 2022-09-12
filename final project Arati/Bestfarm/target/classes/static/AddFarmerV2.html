@@ -1,0 +1,126 @@
+<html>
+
+<head>
+
+    <script>
+
+        function formValidation() {
+            console.log("in f10");
+
+            document.getElementById("NameError").innerHTML = "";
+            document.getElementById("AgeError").innerHTML = "";
+            document.getElementById("GenderError").innerHTML = "";
+
+            var formHasErrors = false;
+
+            var FN = document.forms['farmerForm'].fname.value;
+            var AG = document.forms['farmerForm'].age.value;
+            var GN = document.forms['farmerForm'].gender.value;
+
+            if (FN.length <= 8 || FN.length >= 40) {
+                document.getElementById("NameError").innerHTML = "first name cannot be less than 8 chars";
+                //document.getElementById("firstName").style.backgroundColor = "red";
+                formHasErrors = true;
+            };
+            if (AG <= 18 || AG >= 125) {
+                document.getElementById("AgeError").innerHTML = "age should be in between 18 and 125";
+                // document.getElementById("lasttName").style.backgroundColor = "red";
+                formHasErrors = true;
+            };
+            if (GN === null || GN === "") {
+                document.getElementById("GenderError").innerHTML = "pls select one Gender";
+                //document.getElementById("gender").style.backgroundColor = "red";
+                formHasErrors = true;
+            };
+
+            if (formHasErrors === false) {
+
+                submitNewFarmerForm();
+
+            };
+
+            return false;
+
+        }
+
+
+
+        async function submitNewFarmerForm() {
+            let myform = document.forms['farmerForm'];
+
+            await fetch('api/farmers/addnewfarmer', {
+                method: 'POST',
+                headers: { "Content-type": "application/json;charset=UTF-8" },
+                /*
+                JSON.stringify()=converts a JavaScript value to a JSON string,
+                */
+                body: JSON.stringify(
+                    {
+                        "fname": myform.fname.value,
+                        "age": myform.age.value,
+                        "gender": myform.gender.value
+                    }
+                )
+            })
+
+                /*
+                res. json() in react means: when you try fetch data from a server, 
+                it will send you a RESPONSE which contains tons of irrelevant information. 
+                To target only the BODY part of the response and to "CONVERT it from JSON to Javascript",
+                 you use res. json()
+                 */
+                .then(res => res.json())
+                .then(res => {
+                    console.log(res);
+                    document.getElementById("msg").innerText = res.message;
+                    document.forms['farmerForm'].fname.value = "";
+                    document.forms['farmerForm'].age.value = "";
+                    document.forms['farmerForm'].gender.value = "";
+
+                })
+                .catch(err => document.getElementById("msg").innerText = "failed to add farmer");
+
+
+        }
+
+    </script>
+
+</head>
+
+<body style="background-image: url('https://wallpaperaccess.com/full/2314983.jpg')">
+
+    <h3><a href="/logout" style="color: red;margin-left:92%;text-underline-position: below;">Logout</a></h3>
+    <p style="width:70%;margin-left:auto;margin-right:auto;margin-top: 50px;">
+        <center>
+
+            <h1 style="font-size: 44;color:black">Best Farms</h1> <br>
+            <h3>Add New Farmer</h3>
+
+            <form name="farmerForm" method="POST">
+
+                <br /> Name &nbsp;: <input type="text" name="fname" required> <br>
+                <br /> Age &nbsp;:&nbsp; <input type="text" name="age" required> <br>
+                <br /> Gender &nbsp;:&nbsp;&nbsp;
+                <input type="radio" name="gender" value="Male"> Male &nbsp;&nbsp;&nbsp;
+                <input type="radio" name="gender" value="Female">Female
+
+                <br><br>
+                <br />
+
+                <div id="msg"> </div>
+
+            </form>
+
+            <button value="Add Farmer" onclick="formValidation();" style="width: 170px;font-size: 20px;" class="btn btn-info"> Add
+                Farmer</button> &nbsp; &nbsp;
+            <button type="submit" onclick="window.location.href='index.html'" style="width: 170px;font-size: 20px; "
+                class="btn btn-info">Back</button>
+
+            <br /><br /><span style="color:red; background:yellow;" id="NameError"> </span>
+            <br /><br /><span style="color:red; background:yellow;" id="AgeError"> </span>
+            <br /><br /><span style="color:red; background:yellow;" id="GenderError"> </span> <br /><br />
+
+    </p>
+    </center>
+
+</html>
